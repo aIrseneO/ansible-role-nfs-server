@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  any_errors_fatal: true
+  become: true
+  roles:
+  - role: aIrseneO.nfs-server
+    vars:
+      nfs_server_exports:
+      - export:
+        access:
+          - hostname: '*'
+            options:
+              - 'rw'
+              - 'sync'
+              - 'no_subtree_check'
+              - 'no_root_squash'
+        mode: "u=rwx,g=rwx,o=rwx"
+        path: "/opt/nfs/test"

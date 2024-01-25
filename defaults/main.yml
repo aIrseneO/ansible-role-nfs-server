@@ -1,0 +1,16 @@
+---
+nfs_server_exports: []
+nfs_server_rpcmountdopts:
+  - '--manage-gids'
+  # - '--no-nfs-version 4'
+  # - '--port 2000'
+nfs_server_rpcnfsdcount: 8
+nfs_server_rpcnfsdopts: []
+  # - '--port 2049'
+  # - '--no-nfs-version 4'
+  # - '--no-tcp'
+  # - '--no-udp'
+
+nfs_server_statdopts: []
+  # - "--port 4000"
+  # - "--outgoing-port 4001"
